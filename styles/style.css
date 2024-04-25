@@ -178,10 +178,9 @@ fieldset {
   font-size: 18px;
   background-color: #1b1919;
   width: 225px;
-  border-color: #fff;
+  border: 1px solid #fff;
   border-left-style: none;
   border-right-style: none;
-  border-width: 1px;
   height: 27px;
 }
 
@@ -215,4 +214,47 @@ fieldset {
   width: 19px;
   height: 19px;
   margin-inline-end: 5px;
+}
+
+.search-form__label-text:focus {
+  outline: none;
+}
+
+.search-form__label:focus {
+  outline: none; 
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__pseudo-checkbox {
+  position: relative;
+}
+
+.search-form__checkbox:checked+.search-form__pseudo-checkbox::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 1px;
+  top: 1px;
+  background-color: #fff;
+}
+
+.search-form__checkbox:hover {
+  text-decoration: underline;
+}
+
+.search-form__textfield:active {
+  border-style: solid;
+}
+
+.search-form__checkbox-list .search-form__label:hover {
+  text-decoration: underline;
 }
